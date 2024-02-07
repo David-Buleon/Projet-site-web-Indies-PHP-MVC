@@ -1,0 +1,51 @@
+#panneau_admin{
+    border-radius: 20px;
+    border: solid 4px rgb(0, 177, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    padding: 20px;
+    background-color:rgba(175, 175, 175, 0.924);
+    text-align: center;
+    justify-content: center;
+    max-width: 60%;
+    }
+
+#admin_titre{
+    font-family: 'SpidroMarley';
+    font-size: 1.5rem;
+    background-color: rgb(0, 121, 255);
+    color: #F2EFEF;
+    border-radius: 20px;
+    padding: 10px;
+    margin: auto;
+    max-width: 30%;
+
+  }
+
+#div_admin_user{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#div_admin_news{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h4.gestion_titre{
+    font-family: 'SpidroMarley';
+    font-size: 1.5rem;
+    color:rgb(205, 0, 0);
+}
+
+.gestion_lien{
+    font-family: 'SpidroMarley';
+    font-size: 1.5rem;
+    color: rgba(8, 8, 8, 0.867);
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+

@@ -1,0 +1,42 @@
+#données_utilisateur{
+    border-radius: 20px;
+    border: solid 4px rgb(0, 177, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color:rgba(175, 175, 175, 0.924);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px ;
+    margin: 0px 80px;
+}
+.info_utilisateur{
+    font-family: 'SpidroMarley';
+    font-size: 1.5rem;
+    color: rgba(8, 8, 8, 0.867);
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.donnee_utilisateur{
+    font-family: 'SpidroMarley';
+    font-size: 1.5rem;
+    color: rgb(0, 121, 255);
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.nav_supp{
+    font-family: 'SpidroMarley';
+    font-size: 1.5rem;
+    color: rgb(205, 0, 0);
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.nav_modif{
+    font-family: 'SpidroMarley';
+    font-size: 1.5rem;
+    color: rgb(205, 0, 0);
+    text-decoration: none;
+    padding-left: 20px;
+}

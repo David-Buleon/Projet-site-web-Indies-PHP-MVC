@@ -1,0 +1,117 @@
+CREATE TABLE role(
+   id_role INT AUTO_INCREMENT,
+   nom_role VARCHAR(20) NOT NULL,
+   PRIMARY KEY(id_role)
+);
+
+CREATE TABLE utilisateur(
+   id_utilisateur INT AUTO_INCREMENT,
+   nom VARCHAR(20),
+   email VARCHAR(50) NOT NULL,
+   password VARCHAR(300) NOT NULL,
+   id_role INT NOT NULL,
+   PRIMARY KEY(id_utilisateur),
+   UNIQUE(email),
+   FOREIGN KEY(id_role) REFERENCES role(id_role)
+);
+
+CREATE TABLE images(
+   id_images INT AUTO_INCREMENT,
+   titre VARCHAR(50) NOT NULL,
+   contenu VARCHAR(400) NOT NULL,
+   date_publication DATE DEFAULT CURRENT_DATE(),
+   id_utilisateur INT NOT NULL,
+   PRIMARY KEY(id_images),
+   FOREIGN KEY(id_utilisateur) REFERENCES utilisateur(id_utilisateur)
+);
+
+CREATE TABLE video(
+   id_video INT AUTO_INCREMENT,
+   titre VARCHAR(50) NOT NULL,
+   contenu VARCHAR(400) NOT NULL,
+   description VARCHAR(300),
+   date_publication DATE DEFAULT CURRENT_DATE(),
+   id_utilisateur INT NOT NULL,
+   PRIMARY KEY(id_video),
+   FOREIGN KEY(id_utilisateur) REFERENCES utilisateur(id_utilisateur)
+);
+
+CREATE TABLE news(
+   id_news INT AUTO_INCREMENT,
+   titre VARCHAR(50) NOT NULL,
+   image VARCHAR(400),
+   article VARCHAR(500),
+   news_date DATE DEFAULT CURRENT_DATE(),
+   id_utilisateur INT NOT NULL,
+   PRIMARY KEY(id_news),
+   FOREIGN KEY(id_utilisateur) REFERENCES utilisateur(id_utilisateur)
+);
+
+CREATE TABLE evenement(
+   id_evenement INT AUTO_INCREMENT,
+   titre VARCHAR(50) NOT NULL,
+   date_publication DATE DEFAULT CURRENT_DATE(),
+   date_evenement DATE,
+   id_utilisateur INT NOT NULL,
+   PRIMARY KEY(id_evenement),
+   FOREIGN KEY(id_utilisateur) REFERENCES utilisateur(id_utilisateur)
+);
+
+CREATE TABLE competition(
+   id_competition INT AUTO_INCREMENT,
+   titre VARCHAR(50) NOT NULL,
+   description VARCHAR(300),
+   date_publication DATE DEFAULT CURRENT_DATE(),
+   date_competition DATE,
+   id_utilisateur INT NOT NULL,
+   PRIMARY KEY(id_competition),
+   FOREIGN KEY(id_utilisateur) REFERENCES utilisateur(id_utilisateur)
+);
+
+CREATE TABLE jaime_image(
+   id_jaime_image INT AUTO_INCREMENT,
+   date_jaime DATE DEFAULT CURRENT_DATE(),
+   id_images INT,
+   id_utilisateur INT,
+   PRIMARY KEY(id_jaime_image),
+   FOREIGN KEY(id_images) REFERENCES images(id_images),
+   FOREIGN KEY(id_utilisateur) REFERENCES utilisateur(id_utilisateur)
+);
+
+CREATE TABLE jaime_video(
+   id_jaime_video INT AUTO_INCREMENT,
+   date_jaime DATE DEFAULT CURRENT_DATE(),
+   id_video INT,
+   id_utilisateur INT NOT NULL,
+   PRIMARY KEY(id_jaime_video),
+   FOREIGN KEY(id_video) REFERENCES video(id_video),
+   FOREIGN KEY(id_utilisateur) REFERENCES utilisateur(id_utilisateur)
+);
+
+CREATE TABLE commentaire(
+   id_commentaire INT AUTO_INCREMENT,
+   contenu VARCHAR(300),
+   date_publication DATE DEFAULT CURRENT_DATE(),
+   id_video INT NOT NULL,
+   id_utilisateur INT NOT NULL,
+   PRIMARY KEY(id_commentaire),
+   FOREIGN KEY(id_video) REFERENCES video(id_video),
+   FOREIGN KEY(id_utilisateur) REFERENCES utilisateur(id_utilisateur)
+);
+
+CREATE TABLE evenement_participant(
+   id_utilisateur INT,
+   id_evenement INT,
+   PRIMARY KEY(id_utilisateur, id_evenement),
+   FOREIGN KEY(id_utilisateur) REFERENCES utilisateur(id_utilisateur),
+   FOREIGN KEY(id_evenement) REFERENCES evenement(id_evenement)
+);
+
+CREATE TABLE competition_participant(
+   id_utilisateur INT,
+   id_competition INT,
+   PRIMARY KEY(id_utilisateur, id_competition),
+   FOREIGN KEY(id_utilisateur) REFERENCES utilisateur(id_utilisateur),
+   FOREIGN KEY(id_competition) REFERENCES competition(id_competition)
+);
+

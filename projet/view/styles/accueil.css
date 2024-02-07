@@ -1,0 +1,200 @@
+#presentation_titre {
+    border-radius: 20px;
+    border: solid 4px rgb(0, 177, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 200px;
+    padding: 20px;
+    background-color: rgba(175, 175, 175, 0.924);
+    text-align: center;
+    justify-content: center;
+  }
+  
+  #titre_2 {
+    text-align: center;
+    font-family: 'Brandey';
+    font-size: 3rem;
+    text-shadow: 0 4px 8px rgba(42, 39, 39, 0.837);
+  }
+  
+  #para_1 {
+    text-align: center;
+    font-family: 'SpidroMarley';
+    font-size: 1.5rem;
+  }
+  
+  .bleu {
+    color: rgba(11, 155, 216, 0.867);
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  #titre_3 {
+    font-family: 'SpidroMarley';
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .galllerie {
+    margin: 20px auto;
+    padding: 0 300px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    justify-items: center;
+    gap: 10px;
+    
+    
+  }
+  
+  .items_1{
+    color: rgb(0, 121, 255);
+  }
+
+  .items_2{
+    color: rgba(11, 155, 216, 0.867);
+  }
+
+  .items_1,
+  .items_2 {
+    font-family: 'SpidroMarley';
+    font-size: 1.5rem;
+    min-height: 60px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s;
+  }
+  
+  .items_1:hover,
+  .items_2:hover {
+    transform: scale(1.1) rotate(12deg);
+  }
+  
+  #para_2 {
+    font-family: 'SpidroMarley';
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 40px 0px;
+  }
+  
+  #shfr_logo {
+    width: 15%;
+    padding-top: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #para_3 {
+    font-family: 'SpidroMarley';
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .span_shfr {
+    color: rgb(255, 195, 0);
+    font-family: 'SpidroMarley';
+    font-size: 1.5rem;
+  }
+  
+  #discord_logo {
+    width: 6%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  
+  #para_4 {
+    font-family: 'SpidroMarley';
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Styles for smaller screens */
+  @media (max-width: 1300px) {
+    #presentation_titre {
+      margin: 10px;
+      padding: 10px;
+    }
+  
+    #titre_2 {
+      font-size: 2rem;
+    }
+  
+    #para_1,
+    #para_2,
+    #para_3,
+    #para_4,
+    .bleu,
+    .span_shfr {
+      font-size: 1rem;
+    }
+  
+    .items_1,
+    .items_2 {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  
+    #shfr_logo {
+      width: 40%;
+      padding-top: 10px;
+    }
+  
+    #discord_logo {
+      width: 20%;
+      padding-top: 10px;
+    }
+  
+    /* To center the gallery items */
+    .galllerie {
+      padding: 0 10px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+
+  @media (max-width: 1800px) and (min-width: 1300px) {
+    #presentation_titre {
+        margin: 10px;
+        padding: 10px;
+      }
+    
+      #titre_2 {
+        font-size: 2rem;
+      }
+    
+      #para_1,
+      #para_2,
+      #para_3,
+      #para_4,
+      .bleu,
+      .span_shfr {
+        font-size: 1rem;
+      }
+    
+      .items_1,
+      .items_2 {
+        font-size: 1rem;
+        padding: 10px;
+      }
+    
+      #shfr_logo {
+        width: 40%;
+        padding-top: 10px;
+      }
+    
+      #discord_logo {
+        width: 20%;
+        padding-top: 10px;
+      }
+    
+      /* To center the gallery items */
+      .galllerie {
+        padding: 0 10px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+  }
+  

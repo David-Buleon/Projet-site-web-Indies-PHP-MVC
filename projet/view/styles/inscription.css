@@ -1,0 +1,39 @@
+/* Styles pour le formulaire d'inscription */
+.formulaire_inscription {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Styles pour rendre la page responsive */
+  @media screen and (max-width: 600px) {
+    .formulaire_inscription {
+      max-width: 100%;
+      padding: 10px;
+    }
+  }
+  
